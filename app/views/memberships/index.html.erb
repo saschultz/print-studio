@@ -18,7 +18,7 @@
       <% @memberships.each do |membership| %>
       <div class="col-lg-4">
         <div class="well">
-          <p><%= link_to membership.membership_type, membership_path(membership) %></p>
+          <p class="well-text"><%= link_to membership.membership_type, membership_path(membership) %></p>
         </div>
       </div>
       <% end %>
