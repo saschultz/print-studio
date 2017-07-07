@@ -1,4 +1,19 @@
 <div class="container">
+  <div class="row nav-bar" >
+    <div class="col-sm-3">
+      <p><%= link_to 'HOME', root_path %></p>
+    </div>
+    <div class="col-sm-3">
+      <p><%= link_to 'MEMBERSHIPS', memberships_path %></p>
+    </div>
+    <div class="col-sm-3">
+      <p>GALLERY</p>
+    </div>
+    <div class="col-sm-3">
+      <p>CONTACT</p>
+    </div>
+  </div>
+  <br>
   <h1><%= @membership.membership_type %></h1>
   <p><%= @membership.description %></p>
   <p><%= @membership.tools %></p>
@@ -19,9 +34,8 @@
     <p><%= link_to 'add review', new_membership_review_path(@membership) if current_user %></p>
     <br>
   <% else %>
-    <p><%= link_to 'add first review', new_membership_review_path(@membership) if current_user %></p>
+    <p><%= link_to 'be the first to review this membership!', new_membership_review_path(@membership) if current_user %></p>
   <% end %>
-  
-  <hr>
-  <%= link_to 'all memberships', memberships_path %>
+
+
 </div>

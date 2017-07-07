@@ -1,11 +1,27 @@
-<% @memberships.each do |membership| %>
   <div class="container">
+    <div class="row nav-bar" >
+      <div class="col-sm-3">
+        <p><%= link_to 'HOME', root_path %></p>
+      </div>
+      <div class="col-sm-3">
+        <p><%= link_to 'MEMBERSHIPS', memberships_path %></p>
+      </div>
+      <div class="col-sm-3">
+        <p>GALLERY</p>
+      </div>
+      <div class="col-sm-3">
+        <p>CONTACT</p>
+      </div>
+    </div>
+    <br>
     <div class="row">
       <div class="col-lg-4">
+        <% @memberships.each do |membership| %>
         <div class="well">
           <p><%= link_to membership.membership_type, membership_path(membership) %></p>
         </div>
+        <% end %>
       </div>
     </div>
+
   </div>
-<% end %>
