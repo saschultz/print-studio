@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col-lg-4">
         <div class="well">
-          <p><%= membership.membership_type %></p>
+          <p><%= link_to membership.membership_type, membership_path(membership) %></p>
         </div>
       </div>
     </div>
