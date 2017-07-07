@@ -1,6 +1,8 @@
 class ReviewsController < ApplicationController
 
   def new
-  end  
+    @membership = Membership.find(params[:membership_id])
+    @review = @membership.reviews.new
+  end
 
 end
