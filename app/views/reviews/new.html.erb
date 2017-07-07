@@ -1,6 +1,7 @@
 <div class="container">
   <h3>We welcome your feedback!</h3>
   <br>
+  <h4>Review <%= @membership.membership_type %></h4>
   <%= form_for [@membership, @review] do |f| %>
     <div class="form-group">
       <%= f.label :name %>

@@ -5,5 +5,23 @@
   <br>
   <p>$<%= @membership.cost %> / <%= @membership.cost_rate %></p>
   <br>
-  <p><%= link_to 'review membership option', new_membership_review_path(@membership) if current_user %></p>
+
+  <% if @reviews.any? && current_user%>
+    <h3>Member Reviews</h3>
+    <ul>
+      <% @reviews.each do |review| %>
+      <li>
+        "<%= review.feedback %>"
+        - <%= review.name %><br>
+      </li>
+      <% end %>
+    </ul>
+    <p><%= link_to 'add review', new_membership_review_path(@membership) if current_user %></p>
+    <br>
+  <% else %>
+    <p><%= link_to 'add first review', new_membership_review_path(@membership) if current_user %></p>
+  <% end %>
+  
+  <hr>
+  <%= link_to 'all memberships', memberships_path %>
 </div>

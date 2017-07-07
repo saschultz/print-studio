@@ -7,6 +7,7 @@ class MembershipsController < ApplicationController
 
   def show
     @membership = Membership.find(params[:id])
+    @reviews = @membership.reviews.all
   end
 
 end
