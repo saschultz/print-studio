@@ -1,4 +1,19 @@
 <div class="container">
+  <div class="row nav-bar" >
+    <div class="col-sm-3">
+      <p><%= link_to 'HOME', root_path %></p>
+    </div>
+    <div class="col-sm-3">
+      <p><%= link_to 'MEMBERSHIPS', memberships_path %></p>
+    </div>
+    <div class="col-sm-3">
+      <p>GALLERY</p>
+    </div>
+    <div class="col-sm-3">
+      <p>CONTACT</p>
+    </div>
+  </div>
+  <br>
   <h3>We welcome your feedback!</h3>
   <br>
   <h4>Review <%= @membership.membership_type %></h4>
