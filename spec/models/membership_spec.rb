@@ -6,4 +6,5 @@ describe Membership do
   it { should validate_presence_of :tools }
   it { should validate_presence_of :cost }
   it { should validate_presence_of :cost_rate }
+  it { should have_many :reviews }
 end
