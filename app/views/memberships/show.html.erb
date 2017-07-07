@@ -14,12 +14,15 @@
     </div>
   </div>
   <br>
-  <h1><%= @membership.membership_type %></h1>
-  <p><%= @membership.description %></p>
-  <p><%= @membership.tools %></p>
-  <br>
-  <p>$<%= @membership.cost %> / <%= @membership.cost_rate %></p>
-  <br>
+  <div class="membership-div">
+    <h1><%= @membership.membership_type %></h1>
+    <p>$<%= @membership.cost %> / <%= @membership.cost_rate %></p>
+    <br>
+    <p class="membership-info"><%= @membership.description %></p>
+    <p class="membership-info">equipment: <%= @membership.tools %></p>
+    <br>
+    <img src="/assets/info.png">
+  </div>
 
   <% if @reviews.any? && current_user%>
     <h3>Member Reviews</h3>
