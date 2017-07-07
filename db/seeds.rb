@@ -1,7 +1,11 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+Membership.destroy_all
+
+membership_list = [
+  [ "Full Membership", "Full studio members will receive their own personal key for 24/7 acccess, appealing to early birds, night owls, and printmaking obsessed artists alike. Full memberships must be renewed after one year.", "black and colored inks, solvent, newsprint, acid baths for copper etching, and all printing presses", 100, "month"],
+  [ "Rental Member", "Rental members can access the studio on any given day between the hours of 12pm - 5pm. Rental membership comes with a studio tour and rental day one.", "black ink, solvent, newsprint, acid baths for copper etching, and all printing presses", 40, "day"],
+  [ "Five Visit Pass", "Pass members can access the studio up to five times with studio access during business hours only. Pass memberships expire after one year.", "black ink, solvent, newsprint, acid baths for copper etching, and all printing presses", 70, "flat fee"]
+]
+
+membership_list.each do | membership_type, description, tools, cost, cost_rate |
+  Membership.create( membership_type: membership_type, description: description, tools: tools, cost: cost, cost_rate: cost_rate )
+end
