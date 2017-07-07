@@ -23,22 +23,23 @@
     <br>
     <img src="/assets/info.png">
   </div>
-
-  <% if @reviews.any? && current_user%>
-    <h3>Member Reviews</h3>
-    <ul>
-      <% @reviews.each do |review| %>
-      <li>
-        "<%= review.feedback %>"
-        - <%= review.name %><br>
-      </li>
+  <div class="row">
+    <div class="col-lg-7">
+      <% if @reviews.any? && current_user%>
+      <h3>Member Reviews</h3>
+      <ul>
+        <% @reviews.each do |review| %>
+        <li>
+          "<%= review.feedback %>"
+          - <%= review.name %><br>
+        </li>
+        <% end %>
+      </ul>
+      <p><%= link_to 'add review', new_membership_review_path(@membership) if current_user %></p>
+      <br>
+      <% else %>
+      <p><%= link_to 'be the first to review this membership!', new_membership_review_path(@membership) if current_user %></p>
       <% end %>
-    </ul>
-    <p><%= link_to 'add review', new_membership_review_path(@membership) if current_user %></p>
-    <br>
-  <% else %>
-    <p><%= link_to 'be the first to review this membership!', new_membership_review_path(@membership) if current_user %></p>
-  <% end %>
-
-
+    </div>
+  </div>
 </div>
