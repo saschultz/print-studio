@@ -1,11 +1,16 @@
 <div class="container">
   <h3>We welcome your feedback!</h3>
+  <br>
   <%= form_for [@membership, @review] do |f| %>
     <div class="form-group">
       <%= f.label :name %>
       <%= f.text_field :name %>
+    </div>
+    <div class="form-group">
       <%= f.label :feedback %>
       <%= f.text_field :feedback %>
+    </div>
+    <div class="form-group">
       <%= f.submit "submit", class: "btn btn-default" %>
     </div>
   <% end %>
