@@ -4,4 +4,6 @@
   <p><%= @membership.tools %></p>
   <br>
   <p>$<%= @membership.cost %> / <%= @membership.cost_rate %></p>
+  <br>
+  <p><%= link_to 'review membership option', new_membership_review_path(@membership) if current_user %></p>
 </div>
