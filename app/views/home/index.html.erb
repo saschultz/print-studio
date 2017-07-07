@@ -1,3 +1,27 @@
+<p><%= current_user.email if current_user %></p>
+<%= link_to 'sign out', destroy_user_session_path, :method => :delete if current_user %><br><br>
+<%= link_to 'profile', user_path(current_user) if current_user %>
+<p class="landing-sign-in"><%= link_to 'sign in', new_user_session_path if !current_user %></p>
+<p class="landing-sign-up"><%= link_to 'sign up', new_user_registration_path if !current_user %></p>
 <div class="jumbotron">
-  <h1>Portland Print Studio</h1>
+  <div class="row">
+    <h1 class="header">Portland Print Studio</h1>
+  </div>
+</div>
+<div class="container">
+
+  <div class="row">
+    <div class="col-sm-3">
+      <p><%= link_to 'home', root_path %></p>
+    </div>
+    <div class="col-sm-3">
+      <p>memberships</p>
+    </div>
+    <div class="col-sm-3">
+      <p>gallery</p>
+    </div>
+    <div class="col-sm-3">
+      <p>contact us</p>
+    </div>
+  </div>
 </div>
