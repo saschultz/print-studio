@@ -1,3 +1,3 @@
 class Review < ApplicationRecord
-  validates(:name, :presence => true)
+  validates(:name, :feedback, :presence => true)
 end
