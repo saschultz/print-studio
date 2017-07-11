@@ -9,7 +9,7 @@ RailsAdmin.config do |config|
 
   config.authorize_with do |controller|
     unless current_user && current_user.admin
-      flash[:error] = "You are not authorized to visit that page."
+      flash[:alert] = "You are not authorized to visit that page."
       redirect_to '/'
     end
   end
