@@ -3,9 +3,9 @@ RailsAdmin.config do |config|
   ### Popular gems integration
 
   ## == rails_admin ==
-    config.main_app_name = ["Print Shop", "BackOffice"]
-    config.main_app_name = Proc.new { |controller| [ "Print Shop", "BackOffice - #{controller.params[:action].try(:titleize)}" ] }
-  end
+  config.main_app_name = ["Print Shop", "BackOffice"]
+  config.main_app_name = Proc.new { |controller| [ "Print Shop", "BackOffice - #{controller.params[:action].try(:titleize)}" ] }
+
 
   config.authorize_with do |controller|
     unless current_user && current_user.admin
