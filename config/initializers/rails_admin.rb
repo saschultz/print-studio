@@ -7,6 +7,13 @@ RailsAdmin.config do |config|
     config.main_app_name = Proc.new { |controller| [ "Print Shop", "BackOffice - #{controller.params[:action].try(:titleize)}" ] }
   end
 
+  config.authorize_with do |controller|
+    unless current_user && current_user.admin
+      flash[:error] = "You are not authorized to visit that page."
+      redirect_to '/'
+    end
+  end
+
   ## == Devise ==
   # config.authenticate_with do
   #   warden.authenticate! scope: :user
