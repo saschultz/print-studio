@@ -1,5 +1,3 @@
-<!-- <p class="landing-sign-out"><%= current_user.email if current_user %> <%= link_to '| sign out', destroy_user_session_path, :method => :delete if current_user %></p>
-<p class="landing-sign-in-out"><%= link_to 'sign in', new_user_session_path if !current_user %> <%= link_to ' | sign up', new_user_registration_path if !current_user %></p> -->
 <div class="jumbotron">
   <div class="row">
     <h1 class="header">Portland Print Studio</h1>
@@ -17,7 +15,7 @@
       <p>GALLERY</p>
     </div>
     <div class="col-sm-3">
-      <p>CONTACT</p>
+      <p><%= link_to 'CONTACT', contacts_path %></p>
     </div>
   </div>
   <br>
