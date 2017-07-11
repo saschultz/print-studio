@@ -1,3 +1,10 @@
+admin = User.new
+admin.username = 'admin'
+admin.email = 'admin@email.com'
+admin.password = 'xxxxxx'
+admin.admin = true
+admin.save!
+
 Membership.destroy_all
 
 membership_list = [
