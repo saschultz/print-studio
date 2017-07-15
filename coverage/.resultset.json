@@ -535,11 +535,11 @@
         null,
         null,
         1,
-        6,
+        12,
         null,
         null,
         1,
-        6,
+        14,
         0,
         0,
         null,
@@ -636,7 +636,7 @@
         1,
         null,
         1,
-        7,
+        8,
         null,
         null
       ],
@@ -794,6 +794,28 @@
         1,
         null,
         null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
         null
       ],
       "/Users/saschultz/Desktop/print_shop/spec/models/membership_spec.rb": [
@@ -824,6 +846,6 @@
         null
       ]
     },
-    "timestamp": 1500150610
+    "timestamp": 1500150866
   }
 }
