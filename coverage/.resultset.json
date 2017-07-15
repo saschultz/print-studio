@@ -517,6 +517,61 @@
         null,
         null
       ],
+      "/Users/saschultz/Desktop/print_shop/config/initializers/rails_admin.rb": [
+        1,
+        null,
+        null,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
       "/Users/saschultz/Desktop/print_shop/config/initializers/wrap_parameters.rb": [
         null,
         null,
@@ -537,8 +592,14 @@
         1,
         1,
         1,
+        1,
         null,
         1,
+        1,
+        null,
+        null,
+        1,
+        null,
         1,
         null,
         null
@@ -560,6 +621,12 @@
         1,
         1,
         1,
+        1,
+        1,
+        null,
+        1,
+        0,
+        null,
         null
       ],
       "/Users/saschultz/Desktop/print_shop/app/helpers/application_helper.rb": [
@@ -574,6 +641,14 @@
       ],
       "/Users/saschultz/Desktop/print_shop/app/channels/application_cable/connection.rb": [
         1,
+        1,
+        null,
+        null
+      ],
+      "/Users/saschultz/Desktop/print_shop/app/controllers/contacts_controller.rb": [
+        1,
+        1,
+        null,
         1,
         null,
         null
@@ -671,6 +746,6 @@
         null
       ]
     },
-    "timestamp": 1499631535
+    "timestamp": 1499744524
   }
 }
