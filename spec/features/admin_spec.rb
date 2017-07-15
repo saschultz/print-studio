@@ -11,6 +11,11 @@ describe 'admin actions' do
     click_on 'Admin'
   end
 
+  it 'does not allow an admin to visit the rails admin dashboard' do
+    visit '/admin'
+    expect(page).to have_content 'You are not authorized to visit that page.'
+  end
+
   it 'allows the admin to create' do
     user = FactoryGirl.create(:user)
     visit '/'
